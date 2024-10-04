@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+    <title>My weather App</title>
+  </head>
+  <body>
+    <div class="weather-app">
+    <header>
+      <form id="search-form">
+        <input type="search" placeholder="Enter a city.." required class="search-input" id="search-input" />
+        <input type="submit" value="Search" class="search-button" />
+      </form>
+    </header>
+
+    <main>
+        <div class="current-weather">
+            <h1 class="current-city" id="current-city"></h1>
+        <p class="details">
+            <span id="current-time"></span>
+            <span id="current-date"></span>
+            <span id="description"></span>
+        <br />
+        Humidity: <strong id="humidity"></strong>, Wind: <strong id="speed"></strong>
+    </p>
+        </div>
+            <div class="temperature-container">
+                <span id="current-temperature">°C</span>
+                <div id="icon"></div>
+            </div>
+        </main>
+    <footer>
+      <p>
+        This project was coded by
+        <a href="https://github.com/SetthuL" target="_blank">SetthuL</a> and is on
+        <a href="https://github.com/SetthuL/My-Weather-App" target="_blank"> GitHub</a> hosted on 
+        <a href="https://chic-unicorn-fca12a.netlify.app/" target="_blank">Netlify</a>
+      </p>
+    
+    </footer>
+    </div>
+  </body>
+    <script src="src/index.js"></script>
+</html>
