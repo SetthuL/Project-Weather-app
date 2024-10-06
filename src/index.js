@@ -41,8 +41,12 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "c3f61ob3a9e36ad964fd78t24e0619f3";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-  axios.get(apiUrl).then(refreshWeather);
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(refreshWeather).catch(handleError);
+}
+
+function handleError(error) {
+  alert("City not found. Please try again.");
 }
 
 function handleSearchSubmit(event) {
