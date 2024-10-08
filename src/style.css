@@ -33,20 +33,30 @@ main {
   padding: 30px;
 }
 
-h1, p {
-  text-align: center;
+
+.current-weather-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.current-weather {
+  flex: 1;
 }
 
 .temperature-container {
   display: flex;
   font-weight: 900;
-  font-size: xx-large;
-  justify-content: center;
+  font-size: 50px;
+  align-items: flex-end;
+  flex-direction: column;
 }
 
 .weather-icon {
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
+  
 }
 
 .weather-forecast {
