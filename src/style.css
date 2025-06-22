@@ -75,7 +75,7 @@ main {
     align-items: stretch;
     margin-top: 30px;
     gap: 15px;
-    overflow-x: auto;
+    overflow-x: visible;
     padding: 10px;
 }  
 
@@ -85,9 +85,7 @@ main {
     max-width: 150px;
     margin: 12px 0;
     transition: transform 0.3s ease;
-    flex: 0 1 calc((100% - 4 * 15px - 20px) / 5);
-    box-sizing: border-box;
-    padding: 8px;
+    flex: 0 1 clamp(90px, 17%, 150px);
 }
 .weather-forecast-day:hover {
   transform: scale(1.05);
@@ -120,13 +118,6 @@ main {
     gap: 10px
   }
 }
-@media (max-width: 400px) {
-  .weather-forecast-day {
-    flex: 1 1 45%;
-    margin-bottom: 15px;
-  }
-}
-
 @media (max-width: 600px) {
   .weather-forecast {
     justify-content: center;
