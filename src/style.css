@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background: #8dc6ff;
+  background: #092e54;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body {
   margin: auto 30px;
   width: 100%;
   max-width: 600px;
-  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(6, 7, 50) 0%, rgb(67, 20, 209) 100.2%);
 }
 
 .search-form {
@@ -65,13 +65,12 @@ main {
   height: 90px;
   
 }
-
 .weather-forecast {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: stretch;
     margin-top: 30px;
     gap: 15px;
@@ -120,13 +119,22 @@ main {
 }
 @media (max-width: 600px) {
   .weather-forecast {
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding: 10px 0;
+    justify-content: flex-start;
+
+
     
+  }
+  .weather-forecast-day {
+    flex: 0 0 auto;
+    min-width: 120px;
   }
 }
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-size: 14px;
-  color: #333;
+  color: #fff;
 }
